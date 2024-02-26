@@ -1,3 +1,3 @@
 # Pictures for using in the Codepen
 
-link [https://codepen.io/your-work/]
+link: https://codepen.io/your-work/
