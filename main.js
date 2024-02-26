@@ -1,5 +1,6 @@
 let copyText = document.querySelector(".copy__text");
-copyText.querySelector("button").addEventListener('click', function () {
+
+copyText.querySelector(".copy__btn").addEventListener('click', function () {
   let input = copyText.querySelector("input.text");
   input.ariaSelected();
   document.execCommand("copy");
