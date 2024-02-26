@@ -6,6 +6,7 @@ copyBtn.addEventListener('click', function () {
   input.select();
 
   document.execCommand("copy");
+
   copyText.classList.add('active');
   window.getSelection().removeAllRanges();
   setTimeout(function () {
