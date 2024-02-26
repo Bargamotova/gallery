@@ -56,16 +56,25 @@ body {
   padding: 10px;
   border-radius: 15px;
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 30vw;
+}
+
+.copy__container {
   display: inline-flex;
   gap: 10px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
 }
 
 .copy__text {
   outline: none;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   color: var(--clr-violet);
+  width: 100%;
 }
 
 .copy__btn {
@@ -74,6 +83,7 @@ body {
   color: var(--clr-text);
   background: var(--clr-violet);
   padding: 5px 10px;
+  position: relative;
 }
 
 .copy__btn::before {
@@ -92,7 +102,7 @@ body {
 .copy__btn::after {
   content: '';
   position: absolute;
-  top: -20px;
+  top: -28px;
   right: 25px;
   width: 10px;
   height: 10px;
@@ -101,8 +111,12 @@ body {
   display: none;
 }
 
-.copy__text.active .copy__btn::before,
-.copy__text.active .copy__btn::after {
+.copy__btn:active {
+  background: #000;
+}
+
+.copy__container.active .copy__btn::before,
+.copy__container.active .copy__btn::after {
   display: block;
 }
 
