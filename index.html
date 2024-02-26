@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
   <title>Pictures</title>
 </head>
 
@@ -13,7 +14,14 @@
     <h1 class="title">Images</h1>
     <div class="content content__animals">
       <h2 class="subtitle">Animals</h2>
-      <p class="notes">Get the image :https://bargamotova.github.io/gallery/animals/[name of image] </p>
+      <div class="copy">
+        <label for="copied">Get the image :</label>
+        <div class="copy__container">
+          <input readonly type="text" class="copy__text" id="copied" value="https://bargamotova.github.io/gallery/animals/[name of
+          image]" />
+          <button class="copy__btn">Copy</button>
+        </div>
+      </div>
       <div class="inner">
         <img class="image" src="animals/1.jpg" alt="animal">
         <img class="image" src="animals/2.jpg" alt="animal">

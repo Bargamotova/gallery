@@ -50,13 +50,59 @@ body {
   color: var(--clr-text);
 }
 
-.notes {
+.copy {
   background: var(--clr-text);
   color: var(--clr-violet);
   padding: 10px;
   border-radius: 15px;
   margin-bottom: 20px;
-  display: inline-block;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.copy__text {
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: var(--clr-violet);
+}
+
+.copy__btn {
+  border: none;
+  background: none;
+  color: var(--clr-text);
+  background: var(--clr-violet);
+}
+
+.copy__btn::before {
+  content: 'Copied';
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: cornflowerblue;
+  color: var(--clr-text);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 15px;
+  display: none;
+}
+
+.copy__btn::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  background: cornflowerblue;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.copy__text.active .copy__btn::before,
+.copy__text.active .copy__btn::after {
+  display: block;
 }
 
 .inner {
@@ -64,6 +110,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   gap: 30px;
+  display: none;
 }
 
 .image {
