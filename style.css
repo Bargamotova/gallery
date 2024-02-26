@@ -1,5 +1,11 @@
 :root {
-  --bg: linear-gradient(135deg, rgb(74, 225, 255) 0%, rgb(250, 41, 187) 100%);
+  --clr-bg: linear-gradient(135deg,
+      rgb(74, 225, 255),
+      rgb(250, 41, 187),
+      rgb(74, 225, 255),
+      rgb(250, 41, 187));
+  --clr-text: #f8f8ff;
+  --clr-violet: #ee82ee;
 }
 
 *,
@@ -16,7 +22,10 @@ html {
 }
 
 body {
-  background-color: var(--bg);
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--clr-bg);
 }
 
 .container {
@@ -28,6 +37,7 @@ body {
 
 .title {
   font-size: calc(6vh + 6vw / 2);
+  color: var(--clr-violet);
 }
 
 .content {
@@ -36,6 +46,8 @@ body {
 
 .subtitle {
   font-size: calc(3vh + 3vw / 2);
+  margin-bottom: 30px;
+  color: var(--clr-text);
 }
 
 .inner {
@@ -49,4 +61,14 @@ body {
   height: auto;
   object-fit: cover;
   display: inline-block;
+  position: relative;
+}
+
+.image::after {
+  position: absolute;
+  content: '';
+  width: 380px;
+  height: 300px;
+  border: 5px solid (var(--clr-violet)/30%);
+
 }
