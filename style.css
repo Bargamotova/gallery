@@ -50,6 +50,10 @@ body {
   color: var(--clr-text);
 }
 
+.subtitle span {
+  font-size: 16px;
+}
+
 .copy {
   background: var(--clr-text);
   color: var(--clr-violet);
