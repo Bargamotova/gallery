@@ -25,7 +25,11 @@ html {
   font-size: calc(6vh + 6vw / 2);
 }
 
-.title__animals {
+.content {
+  margin-bottom: 30px;
+}
+
+.subtitle {
   text-align: center;
   font-size: calc(4vh + 4vw / 2);
 }
