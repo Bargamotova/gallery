@@ -56,7 +56,7 @@ body {
   padding: 10px;
   border-radius: 15px;
   margin-bottom: 20px;
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   align-items: center;
 }
@@ -73,6 +73,7 @@ body {
   background: none;
   color: var(--clr-text);
   background: var(--clr-violet);
+  padding: 5px 10px;
 }
 
 .copy__btn::before {
