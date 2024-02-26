@@ -1,3 +1,7 @@
+:root {
+  --bg: linear-gradient(135deg, rgb(74, 225, 255) 0%, rgb(250, 41, 187) 100%);
+}
+
 *,
 *::after,
 *::before {
@@ -11,27 +15,27 @@ html {
   line-height: 1.5;
 }
 
+body {
+  background-color: var(--bg);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
-
 }
 
 .title {
-  text-align: center;
   font-size: calc(6vh + 6vw / 2);
 }
 
 .content {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .subtitle {
-  text-align: center;
-  font-size: calc(4vh + 4vw / 2);
+  font-size: calc(3vh + 3vw / 2);
 }
 
 .inner {
