@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&display=swap');
+
 :root {
   --clr-bg: linear-gradient(135deg,
       rgb(74, 225, 255),
@@ -6,6 +8,7 @@
       rgb(250, 41, 187));
   --clr-text: #f8f8ff;
   --clr-violet: #ee82ee;
+  --clr-violet-active: #ed52ed;
   --clr-flowerblue: #6495ed;
 }
 
@@ -20,6 +23,8 @@
 html {
   box-sizing: border-box;
   line-height: 1.5;
+  font-family: "Archivo Narrow", sans-serif;
+  font-optical-sizing: auto;
 }
 
 body {
@@ -39,6 +44,10 @@ body {
 .title {
   font-size: calc(6vh + 6vw / 2);
   color: var(--clr-violet);
+
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .example-block {
@@ -84,6 +93,10 @@ body {
   background: var(--clr-violet);
   padding: 5px 10px;
   position: relative;
+  transition: background 0.3s;
+  border-radius: 5px;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
 }
 
 .copy__btn::before {
@@ -106,13 +119,13 @@ body {
   right: 25px;
   width: 10px;
   height: 10px;
-  background: var(--clr-flowerblue);
+  background: var(--clr-violet);
   transform: rotate(45deg);
   display: none;
 }
 
 .copy__btn:active {
-  background: #000;
+  background: var(--clr-violet-active);
 }
 
 .copy__container.active .copy__btn::before,
@@ -124,6 +137,17 @@ body {
   padding: 10px 20px;
   color: var(--clr-flowerblue);
   font-weight: 600;
+}
+
+.copy__example span {
+  font-weight: 300;
+}
+
+.copy__example * em {
+  font-size: 24px;
+  margin: 0 4px;
+  font-family: "Caveat", cursive;
+
 }
 
 .photo-block {
