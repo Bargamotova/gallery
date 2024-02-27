@@ -6,6 +6,7 @@
       rgb(250, 41, 187));
   --clr-text: #f8f8ff;
   --clr-violet: #ee82ee;
+  --clr-flowerblue: #6495ed;
 }
 
 *,
@@ -90,7 +91,7 @@ body {
   position: absolute;
   top: -50px;
   right: 0;
-  background: cornflowerblue;
+  background: var(--clr-flowerblue);
   color: var(--clr-text);
   padding: 5px 10px;
   border-radius: 15px;
@@ -105,7 +106,7 @@ body {
   right: 25px;
   width: 10px;
   height: 10px;
-  background: cornflowerblue;
+  background: var(--clr-flowerblue);
   transform: rotate(45deg);
   display: none;
 }
@@ -121,7 +122,7 @@ body {
 
 .copy__example {
   padding: 10px 20px;
-  color: cornflowerblue;
+  color: var(--clr-flowerblue);
   font-weight: 600;
 }
 
