@@ -25,6 +25,8 @@ html {
   line-height: 1.5;
   font-family: "Archivo Narrow", sans-serif;
   font-optical-sizing: auto;
+
+  font-size: 62.5%;
 }
 
 body {
@@ -35,7 +37,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -57,7 +59,7 @@ body {
   justify-items: center;
   gap: 30px;
   width: 100%;
-
+  font-size: 1.6rem;
 }
 
 .copy {
@@ -70,7 +72,8 @@ body {
 }
 
 .copy__container {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
   justify-content: space-between;
@@ -83,6 +86,8 @@ body {
   border: none;
   padding: 10px 20px;
   color: var(--clr-violet);
+  max-width: 510px;
+  font-size: 1.8rem;
   width: 100%;
 }
 
@@ -96,7 +101,7 @@ body {
   transition: background 0.3s;
   border-radius: 5px;
   font-family: "Caveat", cursive;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .copy__btn::before {
@@ -104,11 +109,11 @@ body {
   position: absolute;
   top: -50px;
   right: 0;
-  background: var(--clr-flowerblue);
+  background: cornflowerblue;
   color: var(--clr-text);
   padding: 5px 10px;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: 1.5rem;
   display: none;
 }
 
@@ -119,7 +124,7 @@ body {
   right: 25px;
   width: 10px;
   height: 10px;
-  background: var(--clr-violet);
+  background: cornflowerblue;
   transform: rotate(45deg);
   display: none;
 }
@@ -135,7 +140,7 @@ body {
 
 .copy__example {
   padding: 10px 20px;
-  color: var(--clr-flowerblue);
+  color: cornflowerblue;
   font-weight: 600;
 }
 
@@ -144,10 +149,9 @@ body {
 }
 
 .copy__example * em {
-  font-size: 24px;
+  font-size: 2rem;
   margin: 0 4px;
   font-family: "Caveat", cursive;
-
 }
 
 .photo-block {
@@ -178,14 +182,11 @@ body {
   font-size: 16px;
 }
 
-
-
 .inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   gap: 30px;
-
 }
 
 .image {
@@ -196,4 +197,36 @@ body {
   border-radius: 15px;
   overflow: hidden;
   background: #ffffff1a;
+}
+
+@media only screen and (max-width: 960px) {
+  .example-block {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .copy {
+    width: 100%;
+  }
+
+  .copy__text {
+    padding: 10px 10px;
+
+  }
+
+  .copy__example {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .copy__text {
+    padding: 10px 10px;
+    order: 2;
+  }
+
+  .copy__btn {
+    order: 1;
+    margin-left: auto;
+  }
 }
